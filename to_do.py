@@ -45,11 +45,10 @@ class ToDoList(Resource):
         
         TODO[todo_id] = {'task': args['task']}
         return TODO[todo_id], 201
-    
+
+
 api.add_resource(ToDoList, '/todo')
 api.add_resource(ToDo, '/todo/<todo_id>')
 
 if __name__ == "__main__":
     app.run(debug=True)
-    
-    
